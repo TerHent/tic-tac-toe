@@ -6,6 +6,8 @@ class Board(tk.Tk):
         super().__init__()
         self.title("Tic-Tac-Toe Game")
         self._cels = {}
+        self._create_board_display()
+        self._create_board_grid()
 
     def _create_board_display(self):
         display_frame = tk.Frame(master = self)
@@ -41,3 +43,10 @@ class Board(tk.Tk):
                     pady = 5,
                     sticky = "nsew"
                 )
+
+def main():
+    board = Board()
+    board.mainloop()
+
+if __name__ == "__main__":
+    main()
